@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      daily_habits: {
+        Row: {
+          category: string
+          completed: boolean
+          created_at: string
+          date: string
+          id: string
+          updated_at: string
+          user_id: string
+          value: string
+        }
+        Insert: {
+          category: string
+          completed?: boolean
+          created_at?: string
+          date?: string
+          id?: string
+          updated_at?: string
+          user_id: string
+          value?: string
+        }
+        Update: {
+          category?: string
+          completed?: boolean
+          created_at?: string
+          date?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+          value?: string
+        }
+        Relationships: []
+      }
       goals: {
         Row: {
           completed: boolean
