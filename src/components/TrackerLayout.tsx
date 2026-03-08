@@ -17,7 +17,7 @@ const TrackerLayout = ({ title, icon, children }: TrackerLayoutProps) => {
 
   return (
     <div className="min-h-screen relative">
-      <WaterBackground3D />
+      <ForestBackground2D />
       <div className="max-w-lg mx-auto px-4 py-8 space-y-6">
         <motion.div
           initial={{ opacity: 0, y: -10 }}

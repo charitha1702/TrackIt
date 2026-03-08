@@ -71,20 +71,13 @@ const DashboardHub = () => {
           </div>
         </motion.div>
 
-        {/* How it works */}
+        {/* Wellness Tree */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="glass-card p-5"
         >
-          <h3 className="font-display font-medium text-foreground mb-2">How TrackIt Works</h3>
-          <ul className="text-sm text-muted-foreground font-body space-y-1">
-            <li>• Track your daily habits & goals</li>
-            <li>• Stay consistent</li>
-            <li>• Watch your progress grow 🌱</li>
-            <li>• Build better routines</li>
-          </ul>
+          <TreeProgress percent={completionPercent} />
         </motion.div>
 
         {/* Tracker Cards Grid */}
