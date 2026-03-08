@@ -9,16 +9,15 @@ import ThemeToggle from "@/components/ThemeToggle";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
 const TRACKERS = [
-  { key: "goals", label: "Goal Tracker", icon: "🌳", path: "/goals" },
+  { key: "goals", label: "Goals", icon: "🌳", path: "/goals" },
   { key: "sleep", label: "Sleep", icon: "😴", path: "/sleep" },
   { key: "water", label: "Water", icon: "💧", path: "/water" },
   { key: "mood", label: "Mood", icon: "🙂", path: "/mood" },
   { key: "study", label: "Study", icon: "📚", path: "/study" },
-  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation" },
   { key: "personal_care", label: "Personal Care", icon: "🧴", path: "/personal-care" },
-  { key: "screen_time", label: "Screen Time", icon: "📱", path: "/screen-time" },
+  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation" },
   { key: "nutrition", label: "Nutrition", icon: "🥗", path: "/nutrition" },
-  { key: "menstrual", label: "Menstrual Cycle", icon: "🌸", path: "/menstrual" },
+  { key: "menstrual", label: "Menstrual Tracker", icon: "🌸", path: "/menstrual" },
 ];
 
 const DashboardHub = () => {
