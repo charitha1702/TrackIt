@@ -2,30 +2,32 @@ import { motion } from "framer-motion";
 import { LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
-import WaterBackground3D from "@/components/WaterBackground3D";
+import ForestBackground2D from "@/components/ForestBackground2D";
+import TreeProgress from "@/components/TreeProgress";
+import { useHabits } from "@/hooks/useHabits";
 import ThemeToggle from "@/components/ThemeToggle";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
 const TRACKERS = [
-  { key: "goals", label: "Goal Tracker", icon: "🌳", path: "/goals" },
+  { key: "goals", label: "Goals", icon: "🌳", path: "/goals" },
   { key: "sleep", label: "Sleep", icon: "😴", path: "/sleep" },
   { key: "water", label: "Water", icon: "💧", path: "/water" },
   { key: "mood", label: "Mood", icon: "🙂", path: "/mood" },
   { key: "study", label: "Study", icon: "📚", path: "/study" },
-  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation" },
   { key: "personal_care", label: "Personal Care", icon: "🧴", path: "/personal-care" },
-  { key: "screen_time", label: "Screen Time", icon: "📱", path: "/screen-time" },
+  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation" },
   { key: "nutrition", label: "Nutrition", icon: "🥗", path: "/nutrition" },
-  { key: "menstrual", label: "Menstrual Cycle", icon: "🌸", path: "/menstrual" },
+  { key: "menstrual", label: "Menstrual Tracker", icon: "🌸", path: "/menstrual" },
 ];
 
 const DashboardHub = () => {
   const { displayName, signOut } = useAuth();
   const navigate = useNavigate();
+  const { completionPercent } = useHabits();
 
   return (
     <div className="min-h-screen relative">
-      <WaterBackground3D />
+      <ForestBackground2D />
 
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
         {/* Header */}
@@ -69,20 +71,13 @@ const DashboardHub = () => {
           </div>
         </motion.div>
 
-        {/* How it works */}
+        {/* Wellness Tree */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="glass-card p-5"
         >
-          <h3 className="font-display font-medium text-foreground mb-2">How TrackIt Works</h3>
-          <ul className="text-sm text-muted-foreground font-body space-y-1">
-            <li>• Track your daily habits & goals</li>
-            <li>• Stay consistent</li>
-            <li>• Watch your progress grow 🌱</li>
-            <li>• Build better routines</li>
-          </ul>
+          <TreeProgress percent={completionPercent} />
         </motion.div>
 
         {/* Tracker Cards Grid */}

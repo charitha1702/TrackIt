@@ -12,7 +12,7 @@ import MoodPage from "./pages/MoodPage";
 import StudyPage from "./pages/StudyPage";
 import MeditationPage from "./pages/MeditationPage";
 import PersonalCarePage from "./pages/PersonalCarePage";
-import ScreenTimePage from "./pages/ScreenTimePage";
+
 import NutritionPage from "./pages/NutritionPage";
 import MenstrualPage from "./pages/MenstrualPage";
 import NotFound from "./pages/NotFound";
@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/study" element={<StudyPage />} />
             <Route path="/meditation" element={<MeditationPage />} />
             <Route path="/personal-care" element={<PersonalCarePage />} />
-            <Route path="/screen-time" element={<ScreenTimePage />} />
+            
             <Route path="/nutrition" element={<NutritionPage />} />
             <Route path="/menstrual" element={<MenstrualPage />} />
             <Route path="*" element={<NotFound />} />
