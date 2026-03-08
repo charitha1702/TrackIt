@@ -119,7 +119,7 @@ const AuthPage = () => {
           )}
 
           {error && <p className="text-destructive text-sm font-body">{error}</p>}
-          {success && <p className="text-green-600 dark:text-green-400 text-sm font-body">{success}</p>}
+          {success && <p className="text-primary text-sm font-body">{success}</p>}
 
           <button
             type="submit"

@@ -61,7 +61,7 @@ const ResetPasswordPage = () => {
           </div>
 
           {error && <p className="text-destructive text-sm font-body">{error}</p>}
-          {success && <p className="text-green-600 dark:text-green-400 text-sm font-body">{success}</p>}
+          {success && <p className="text-primary text-sm font-body">{success}</p>}
 
           <button type="submit" disabled={loading} className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-body font-medium transition-all duration-300 hover:opacity-90 disabled:opacity-50">
             {loading ? "..." : "Update Password"}
