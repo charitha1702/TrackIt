@@ -49,10 +49,10 @@ const AuthPage = () => {
       >
         <div className="text-center mb-8">
           <h1 className="text-3xl font-display font-semibold text-foreground mb-2">
-            🌿 Goal Tracker
+            TrackIt 🌿
           </h1>
           <p className="text-muted-foreground font-body text-sm">
-            Grow your goals, one step at a time
+            Track small habits. Grow a better life.
           </p>
         </div>
 

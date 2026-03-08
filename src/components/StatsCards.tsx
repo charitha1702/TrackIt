@@ -9,9 +9,9 @@ interface StatsCardsProps {
 
 const StatsCards = ({ total, completed, percent }: StatsCardsProps) => {
   const stats = [
-    { icon: Target, label: "Total Goals", value: total },
-    { icon: CheckCircle, label: "Completed", value: completed },
-    { icon: TrendingUp, label: "Progress", value: `${percent}%` },
+    { icon: Target, label: "Total Habits", value: total },
+    { icon: CheckCircle, label: "Completed Today", value: completed },
+    { icon: TrendingUp, label: "Daily Progress", value: `${percent}%` },
   ];
 
   return (
