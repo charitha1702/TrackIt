@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import WaterBackground3D from "@/components/WaterBackground3D";
+import ForestBackground2D from "@/components/ForestBackground2D";
 import ThemeToggle from "@/components/ThemeToggle";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
