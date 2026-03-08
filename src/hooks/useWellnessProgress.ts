@@ -61,6 +61,15 @@ export const useWellnessProgress = () => {
 
   useEffect(() => {
     calculate();
+    // Refresh when user returns to dashboard tab
+    const onFocus = () => calculate();
+    window.addEventListener("focus", onFocus);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") calculate();
+    });
+    return () => {
+      window.removeEventListener("focus", onFocus);
+    };
   }, [calculate]);
 
   return { percent, breakdown, loading, refresh: calculate };
