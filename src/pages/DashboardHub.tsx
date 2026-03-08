@@ -7,16 +7,16 @@ import ThemeToggle from "@/components/ThemeToggle";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
 const TRACKERS = [
-  { key: "goals", label: "Goal Tracker", icon: "🌳", path: "/goals", ready: true },
-  { key: "sleep", label: "Sleep", icon: "😴", path: "/sleep", ready: false },
-  { key: "water", label: "Water", icon: "💧", path: "/water", ready: false },
-  { key: "mood", label: "Mood", icon: "🙂", path: "/mood", ready: false },
-  { key: "study", label: "Study", icon: "📚", path: "/study", ready: false },
-  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation", ready: false },
-  { key: "personal_care", label: "Personal Care", icon: "🧴", path: "/personal-care", ready: false },
-  { key: "screen_time", label: "Screen Time", icon: "📱", path: "/screen-time", ready: false },
-  { key: "nutrition", label: "Nutrition", icon: "🥗", path: "/nutrition", ready: false },
-  { key: "menstrual", label: "Menstrual Cycle", icon: "🌸", path: "/menstrual", ready: false },
+  { key: "goals", label: "Goal Tracker", icon: "🌳", path: "/goals" },
+  { key: "sleep", label: "Sleep", icon: "😴", path: "/sleep" },
+  { key: "water", label: "Water", icon: "💧", path: "/water" },
+  { key: "mood", label: "Mood", icon: "🙂", path: "/mood" },
+  { key: "study", label: "Study", icon: "📚", path: "/study" },
+  { key: "meditation", label: "Meditation", icon: "🧘", path: "/meditation" },
+  { key: "personal_care", label: "Personal Care", icon: "🧴", path: "/personal-care" },
+  { key: "screen_time", label: "Screen Time", icon: "📱", path: "/screen-time" },
+  { key: "nutrition", label: "Nutrition", icon: "🥗", path: "/nutrition" },
+  { key: "menstrual", label: "Menstrual Cycle", icon: "🌸", path: "/menstrual" },
 ];
 
 const DashboardHub = () => {
@@ -43,11 +43,7 @@ const DashboardHub = () => {
         </motion.div>
 
         {/* Quote */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
           <QuoteDisplay />
         </motion.div>
 
@@ -97,20 +93,13 @@ const DashboardHub = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 + i * 0.04 }}
-              onClick={() => tracker.ready ? navigate(tracker.path) : null}
-              className={`glass-card p-5 text-center transition-all duration-300 group ${
-                tracker.ready
-                  ? "hover:scale-[1.03] cursor-pointer"
-                  : "opacity-60 cursor-not-allowed"
-              }`}
+              onClick={() => navigate(tracker.path)}
+              className="glass-card p-5 text-center transition-all duration-300 group hover:scale-[1.03] cursor-pointer"
             >
               <span className="text-3xl block mb-2 group-hover:scale-110 transition-transform duration-300">
                 {tracker.icon}
               </span>
               <p className="font-body text-sm font-medium text-foreground">{tracker.label}</p>
-              {!tracker.ready && (
-                <p className="text-xs text-muted-foreground mt-1 font-body">Coming soon</p>
-              )}
             </motion.button>
           ))}
         </div>

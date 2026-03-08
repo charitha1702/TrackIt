@@ -80,6 +80,177 @@ export type Database = {
         }
         Relationships: []
       }
+      meditation_sessions: {
+        Row: {
+          calmness_level: number | null
+          created_at: string
+          date: string
+          duration_minutes: number | null
+          id: string
+          reflection: string | null
+          stress_before: number | null
+          user_id: string
+        }
+        Insert: {
+          calmness_level?: number | null
+          created_at?: string
+          date?: string
+          duration_minutes?: number | null
+          id?: string
+          reflection?: string | null
+          stress_before?: number | null
+          user_id: string
+        }
+        Update: {
+          calmness_level?: number | null
+          created_at?: string
+          date?: string
+          duration_minutes?: number | null
+          id?: string
+          reflection?: string | null
+          stress_before?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      menstrual_logs: {
+        Row: {
+          created_at: string
+          date: string
+          flow_intensity: string | null
+          id: string
+          mood: string | null
+          notes: string | null
+          period_end: string | null
+          period_start: string | null
+          symptoms: Json | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          flow_intensity?: string | null
+          id?: string
+          mood?: string | null
+          notes?: string | null
+          period_end?: string | null
+          period_start?: string | null
+          symptoms?: Json | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          flow_intensity?: string | null
+          id?: string
+          mood?: string | null
+          notes?: string | null
+          period_end?: string | null
+          period_start?: string | null
+          symptoms?: Json | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      mood_logs: {
+        Row: {
+          created_at: string
+          date: string
+          energy_level: number | null
+          id: string
+          mood: string | null
+          notes: string | null
+          stress_level: number | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          energy_level?: number | null
+          id?: string
+          mood?: string | null
+          notes?: string | null
+          stress_level?: number | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          energy_level?: number | null
+          id?: string
+          mood?: string | null
+          notes?: string | null
+          stress_level?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      nutrition_logs: {
+        Row: {
+          breakfast: boolean | null
+          calories: number | null
+          created_at: string
+          date: string
+          dinner: boolean | null
+          fruit_intake: boolean | null
+          healthy_meal: boolean | null
+          id: string
+          lunch: boolean | null
+          user_id: string
+          vegetable_intake: boolean | null
+        }
+        Insert: {
+          breakfast?: boolean | null
+          calories?: number | null
+          created_at?: string
+          date?: string
+          dinner?: boolean | null
+          fruit_intake?: boolean | null
+          healthy_meal?: boolean | null
+          id?: string
+          lunch?: boolean | null
+          user_id: string
+          vegetable_intake?: boolean | null
+        }
+        Update: {
+          breakfast?: boolean | null
+          calories?: number | null
+          created_at?: string
+          date?: string
+          dinner?: boolean | null
+          fruit_intake?: boolean | null
+          healthy_meal?: boolean | null
+          id?: string
+          lunch?: boolean | null
+          user_id?: string
+          vegetable_intake?: boolean | null
+        }
+        Relationships: []
+      }
+      personal_care_logs: {
+        Row: {
+          completed_tasks: Json | null
+          created_at: string
+          date: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          completed_tasks?: Json | null
+          created_at?: string
+          date?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          completed_tasks?: Json | null
+          created_at?: string
+          date?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -96,6 +267,208 @@ export type Database = {
         Update: {
           created_at?: string
           display_name?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      screen_time_logs: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          social_media_hours: number | null
+          study_hours: number | null
+          total_hours: number | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          id?: string
+          social_media_hours?: number | null
+          study_hours?: number | null
+          total_hours?: number | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          social_media_hours?: number | null
+          study_hours?: number | null
+          total_hours?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      sleep_logs: {
+        Row: {
+          bad_dreams: boolean | null
+          bedtime: string | null
+          created_at: string
+          date: string
+          dream_notes: string | null
+          hours_slept: number | null
+          id: string
+          morning_energy: number | null
+          sleep_quality: number | null
+          user_id: string
+          wake_time: string | null
+        }
+        Insert: {
+          bad_dreams?: boolean | null
+          bedtime?: string | null
+          created_at?: string
+          date?: string
+          dream_notes?: string | null
+          hours_slept?: number | null
+          id?: string
+          morning_energy?: number | null
+          sleep_quality?: number | null
+          user_id: string
+          wake_time?: string | null
+        }
+        Update: {
+          bad_dreams?: boolean | null
+          bedtime?: string | null
+          created_at?: string
+          date?: string
+          dream_notes?: string | null
+          hours_slept?: number | null
+          id?: string
+          morning_energy?: number | null
+          sleep_quality?: number | null
+          user_id?: string
+          wake_time?: string | null
+        }
+        Relationships: []
+      }
+      study_sessions: {
+        Row: {
+          created_at: string
+          date: string
+          duration_minutes: number | null
+          id: string
+          notes: string | null
+          subject_id: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          subject_id?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          subject_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "study_sessions_subject_id_fkey"
+            columns: ["subject_id"]
+            isOneToOne: false
+            referencedRelation: "study_subjects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      study_subjects: {
+        Row: {
+          created_at: string
+          exam_name: string
+          id: string
+          subject_name: string
+          target_score: number | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exam_name?: string
+          id?: string
+          subject_name?: string
+          target_score?: number | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exam_name?: string
+          id?: string
+          subject_name?: string
+          target_score?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      study_topics: {
+        Row: {
+          completed: boolean | null
+          created_at: string
+          id: string
+          name: string
+          subject_id: string
+          user_id: string
+        }
+        Insert: {
+          completed?: boolean | null
+          created_at?: string
+          id?: string
+          name?: string
+          subject_id: string
+          user_id: string
+        }
+        Update: {
+          completed?: boolean | null
+          created_at?: string
+          id?: string
+          name?: string
+          subject_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "study_topics_subject_id_fkey"
+            columns: ["subject_id"]
+            isOneToOne: false
+            referencedRelation: "study_subjects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      water_logs: {
+        Row: {
+          bottle_size_ml: number | null
+          created_at: string
+          daily_goal: number | null
+          date: string
+          glasses: number | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          bottle_size_ml?: number | null
+          created_at?: string
+          daily_goal?: number | null
+          date?: string
+          glasses?: number | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          bottle_size_ml?: number | null
+          created_at?: string
+          daily_goal?: number | null
+          date?: string
+          glasses?: number | null
           id?: string
           user_id?: string
         }
