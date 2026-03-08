@@ -4,7 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 import GoalTrackerPage from "./pages/GoalTrackerPage";
 import SleepPage from "./pages/SleepPage";
 import WaterPage from "./pages/WaterPage";
@@ -12,12 +14,15 @@ import MoodPage from "./pages/MoodPage";
 import StudyPage from "./pages/StudyPage";
 import MeditationPage from "./pages/MeditationPage";
 import PersonalCarePage from "./pages/PersonalCarePage";
-
 import NutritionPage from "./pages/NutritionPage";
 import MenstrualPage from "./pages/MenstrualPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+const P = ({ children }: { children: React.ReactNode }) => (
+  <ProtectedRoute>{children}</ProtectedRoute>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -28,16 +33,16 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/goals" element={<GoalTrackerPage />} />
-            <Route path="/sleep" element={<SleepPage />} />
-            <Route path="/water" element={<WaterPage />} />
-            <Route path="/mood" element={<MoodPage />} />
-            <Route path="/study" element={<StudyPage />} />
-            <Route path="/meditation" element={<MeditationPage />} />
-            <Route path="/personal-care" element={<PersonalCarePage />} />
-            
-            <Route path="/nutrition" element={<NutritionPage />} />
-            <Route path="/menstrual" element={<MenstrualPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
+            <Route path="/goals" element={<P><GoalTrackerPage /></P>} />
+            <Route path="/sleep" element={<P><SleepPage /></P>} />
+            <Route path="/water" element={<P><WaterPage /></P>} />
+            <Route path="/mood" element={<P><MoodPage /></P>} />
+            <Route path="/study" element={<P><StudyPage /></P>} />
+            <Route path="/meditation" element={<P><MeditationPage /></P>} />
+            <Route path="/personal-care" element={<P><PersonalCarePage /></P>} />
+            <Route path="/nutrition" element={<P><NutritionPage /></P>} />
+            <Route path="/menstrual" element={<P><MenstrualPage /></P>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
