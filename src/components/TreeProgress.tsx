@@ -5,10 +5,10 @@ interface TreeProgressProps {
 }
 
 const stages = [
-  { min: 0, emoji: "🌱", label: "Seed", desc: "Plant your first goals" },
-  { min: 25, emoji: "🌿", label: "Sprout", desc: "Growing steadily" },
-  { min: 50, emoji: "🌲", label: "Growing Tree", desc: "Making great progress" },
-  { min: 100, emoji: "🌳", label: "Full Tree", desc: "Forest achieved!" },
+  { min: 0, emoji: "🌱", label: "Seed", desc: "Start tracking your habits" },
+  { min: 25, emoji: "🌿", label: "Sprout", desc: "Building momentum" },
+  { min: 50, emoji: "🌲", label: "Growing Tree", desc: "Great consistency today" },
+  { min: 100, emoji: "🌳", label: "Full Tree", desc: "All habits complete!" },
 ];
 
 const getStage = (percent: number) => {
