@@ -12,7 +12,7 @@ import MoodPage from "./pages/MoodPage";
 import StudyPage from "./pages/StudyPage";
 import MeditationPage from "./pages/MeditationPage";
 import PersonalCarePage from "./pages/PersonalCarePage";
-import ScreenTimePage from "./pages/ScreenTimePage";
+
 import NutritionPage from "./pages/NutritionPage";
 import MenstrualPage from "./pages/MenstrualPage";
 import NotFound from "./pages/NotFound";
