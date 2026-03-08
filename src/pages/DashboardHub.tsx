@@ -27,7 +27,7 @@ const DashboardHub = () => {
 
   return (
     <div className="min-h-screen relative">
-      <WaterBackground3D />
+      <ForestBackground2D />
 
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
         {/* Header */}
