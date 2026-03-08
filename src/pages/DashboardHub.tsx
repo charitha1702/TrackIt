@@ -3,8 +3,7 @@ import { LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import ForestBackground2D from "@/components/ForestBackground2D";
-import TreeProgress from "@/components/TreeProgress";
-import { useHabits } from "@/hooks/useHabits";
+import { useWellnessProgress } from "@/hooks/useWellnessProgress";
 import ThemeToggle from "@/components/ThemeToggle";
 import QuoteDisplay from "@/components/QuoteDisplay";
 
