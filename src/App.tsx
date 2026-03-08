@@ -35,7 +35,7 @@ const App = () => (
             <Route path="/study" element={<StudyPage />} />
             <Route path="/meditation" element={<MeditationPage />} />
             <Route path="/personal-care" element={<PersonalCarePage />} />
-            <Route path="/screen-time" element={<ScreenTimePage />} />
+            
             <Route path="/nutrition" element={<NutritionPage />} />
             <Route path="/menstrual" element={<MenstrualPage />} />
             <Route path="*" element={<NotFound />} />
