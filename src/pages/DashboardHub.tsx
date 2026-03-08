@@ -23,6 +23,7 @@ const TRACKERS = [
 const DashboardHub = () => {
   const { displayName, signOut } = useAuth();
   const navigate = useNavigate();
+  const { completionPercent } = useHabits();
 
   return (
     <div className="min-h-screen relative">
