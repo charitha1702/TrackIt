@@ -5,13 +5,23 @@ interface StatsCardsProps {
   total: number;
   completed: number;
   percent: number;
+  labelTotal?: string;
+  labelCompleted?: string;
+  labelPercent?: string;
 }
 
-const StatsCards = ({ total, completed, percent }: StatsCardsProps) => {
+const StatsCards = ({
+  total,
+  completed,
+  percent,
+  labelTotal = "Total Goals",
+  labelCompleted = "Completed",
+  labelPercent = "Progress",
+}: StatsCardsProps) => {
   const stats = [
-    { icon: Target, label: "Total Habits", value: total },
-    { icon: CheckCircle, label: "Completed Today", value: completed },
-    { icon: TrendingUp, label: "Daily Progress", value: `${percent}%` },
+    { icon: Target, label: labelTotal, value: total },
+    { icon: CheckCircle, label: labelCompleted, value: completed },
+    { icon: TrendingUp, label: labelPercent, value: `${percent}%` },
   ];
 
   return (
