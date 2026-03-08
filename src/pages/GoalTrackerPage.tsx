@@ -1,19 +1,13 @@
 import { useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import TrackerLayout from "@/components/TrackerLayout";
 import { useGoals } from "@/hooks/useGoals";
-import WaterBackground3D from "@/components/WaterBackground3D";
-import ThemeToggle from "@/components/ThemeToggle";
-import TreeProgress from "@/components/TreeProgress";
 import StatsCards from "@/components/StatsCards";
 import GoalCard from "@/components/GoalCard";
 import AddGoalForm from "@/components/AddGoalForm";
-import QuoteDisplay from "@/components/QuoteDisplay";
 
 const GoalTrackerPage = () => {
-  const navigate = useNavigate();
-  const { goals, addGoal, toggleGoal, deleteGoal, totalGoals, completedGoals, completionPercent } = useGoals();
+  const { goals, addGoal, toggleGoal, deleteGoal, addTask, toggleTask, deleteTask, totalGoals, completedGoals, completionPercent } = useGoals();
   const [motivMsg, setMotivMsg] = useState<string | null>(null);
 
   const handleMotivate = useCallback((msg: string) => {
@@ -22,9 +16,7 @@ const GoalTrackerPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
-      <WaterBackground3D />
-
+    <TrackerLayout title="Goals" icon="🌳">
       {/* Motivational popup */}
       <AnimatePresence>
         {motivMsg && (
@@ -39,31 +31,7 @@ const GoalTrackerPage = () => {
         )}
       </AnimatePresence>
 
-      <div className="max-w-lg mx-auto px-4 py-8 space-y-6">
-        {/* Header with back */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between"
-        >
-          <button
-            onClick={() => navigate("/")}
-            className="glass-card p-2 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          <h1 className="text-2xl font-display font-semibold text-foreground">
-            Goal Tracker 🌳
-          </h1>
-          <ThemeToggle />
-        </motion.div>
-
-        {/* Quote */}
-        <QuoteDisplay />
-
-        {/* Tree Progress */}
-        <TreeProgress percent={completionPercent} />
-
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
         {/* Stats */}
         <StatsCards total={totalGoals} completed={completedGoals} percent={completionPercent} />
 
@@ -81,6 +49,9 @@ const GoalTrackerPage = () => {
                 onToggle={toggleGoal}
                 onDelete={deleteGoal}
                 onMotivate={handleMotivate}
+                onAddTask={addTask}
+                onToggleTask={toggleTask}
+                onDeleteTask={deleteTask}
                 index={i}
               />
             ))}
@@ -91,8 +62,8 @@ const GoalTrackerPage = () => {
             </p>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </TrackerLayout>
   );
 };
 
