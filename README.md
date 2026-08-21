@@ -1,15 +1,14 @@
-# 🌿 GuidedGoals — Goal Tracker
+# TrackIt — Goal Tracker
 
-**GuidedGoals** is a calm, aesthetic goal-tracking web application designed to help users build consistency, track progress, and grow their goals over time.
+**TrackIt** is a calm, aesthetic goal-tracking web application designed to help users build consistency, track progress, and grow their goals over time.
 
 The application combines **goal management, progress tracking, nature-inspired visuals, authentication, and persistent data storage** into a peaceful productivity experience.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication
-
+### Authentication
 * User signup and login
 * Secure authentication
 * Session management
@@ -21,8 +20,7 @@ Each user can access and manage only their own goals.
 
 ---
 
-## 🎯 Goal Management
-
+## Goal Management
 Users can:
 
 * Create new goals
@@ -37,7 +35,7 @@ Completed goals are visually distinguished from active goals to make progress ea
 
 ---
 
-## 🌱 Nature-Based Progress System
+##  Nature-Based Progress System
 
 Instead of using a traditional progress bar, GuidedGoals represents progress through the growth of a tree.
 
@@ -54,10 +52,8 @@ This creates a more visual and motivating way to track consistency.
 
 ---
 
-## 📊 Progress Statistics
-
+## Progress Statistics
 The dashboard provides important progress information such as:
-
 * **Total Goals**
 * **Completed Goals**
 * **Completion Percentage**
@@ -65,8 +61,7 @@ The dashboard provides important progress information such as:
 These statistics update automatically as users manage their goals.
 
 ---
-
-## 💬 Motivational Feedback
+## Motivational Feedback
 
 When a goal is completed, GuidedGoals provides a short motivational message.
 
@@ -79,10 +74,9 @@ Examples:
 Completion interactions use subtle animations and visual feedback to make progress feel rewarding.
 
 ---
+##  Calm Water Theme
 
-## 🌊 Calm Water Theme
-
-GuidedGoals uses a peaceful nature-inspired interface.
+TrackIt uses a peaceful nature-inspired interface.
 
 ### Visual elements include:
 
@@ -98,10 +92,8 @@ GuidedGoals uses a peaceful nature-inspired interface.
 The animations are intentionally slow and subtle so they do not distract from productivity.
 
 ---
-
-## ☀️ Day & 🌙 Night Mode
-
-GuidedGoals supports two visual modes.
+##  Day &  Night Mode
+TrackIt supports two visual modes.
 
 ### Day Mode
 
@@ -120,9 +112,9 @@ The interface transitions smoothly between modes.
 
 ---
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
-GuidedGoals follows a:
+TrackIt follows a:
 
 > **Calm Productivity Aesthetic**
 
@@ -140,7 +132,7 @@ The design focuses on making productivity feel peaceful rather than stressful.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -165,10 +157,10 @@ The design focuses on making productivity feel peaceful rather than stressful.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
-guidedgoals/
+TrackIt/
 │
 ├── public/
 │   └── Static assets
@@ -194,7 +186,7 @@ guidedgoals/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -233,7 +225,7 @@ The application will be available through the local development URL provided by 
 
 ---
 
-## 🔑 Environment Variables
+## Environment Variables
 
 If your local setup requires environment variables, create a `.env` file in the project root.
 
@@ -248,9 +240,9 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ---
 
-## 🔄 Development Workflow
+## Development Workflow
 
-GuidedGoals was developed using **Lovable** and is connected to GitHub.
+TrackIt was developed using **Lovable** and is connected to GitHub.
 
 The development workflow can be:
 
@@ -270,9 +262,9 @@ Commit changes
 Changes made through Lovable can be synchronized with the connected GitHub repository.
 
 ---
-## 📱 Responsive Design
+##  Responsive Design
 
-GuidedGoals is designed to work across:
+TrackIt is designed to work across:
 
 * 💻 Desktop
 * 📱 Mobile
@@ -281,7 +273,7 @@ GuidedGoals is designed to work across:
 The interface adapts its layout while maintaining the same calm visual experience.
 
 ---
-## 🌳 User Experience
+##  User Experience
 
 The main experience follows a simple loop:
 
@@ -294,7 +286,7 @@ Complete the Goal
       ↓
 Watch Your Progress Grow
       ↓
-🌳 Grow Your Forest
+ Grow Your Forest
       ↓
 Create the Next Goal
 ```
@@ -321,13 +313,13 @@ Potential future features include:
 ---
 ##  Vision
 
-GuidedGoals is built around a simple idea:
+TrackIt is built around a simple idea:
 > **Small consistent actions grow into something bigger.**
-Instead of treating productivity as a race, GuidedGoals turns progress into a visual journey — one goal, one step, and one tree at a time.
+Instead of treating productivity as a race,TrackIt turns progress into a visual journey — one goal, one step, and one tree at a time.
 
 ---
 ##  Project
 
-**GuidedGoals — Forest Flow Goals**
+**TrackIt — Forest Flow Goals**
 
 Built with using React, TypeScript, Tailwind CSS, Supabase, Lovable, and GitHub.
