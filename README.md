@@ -1,294 +1,333 @@
-# Forest Flow Goals
+# 🌿 GuidedGoals — Goal Tracker
 
-Create a full-stack Goal Tracker Web Application with a calm forest water theme, login system, and persistent data storage.
+**GuidedGoals** is a calm, aesthetic goal-tracking web application designed to help users build consistency, track progress, and grow their goals over time.
 
-The design must feel peaceful, productive, minimal, and aesthetic — not flashy or childish.
+The application combines **goal management, progress tracking, nature-inspired visuals, authentication, and persistent data storage** into a peaceful productivity experience.
 
-----------------------------------------
+---
 
-1. AUTHENTICATION SYSTEM
+## ✨ Features
 
-----------------------------------------
+### 🔐 Authentication
 
-- Signup and Login functionality
+* User signup and login
+* Secure authentication
+* Session management
+* Logout functionality
+* User-specific data
+* Persistent user accounts
 
-- Secure password hashing
+Each user can access and manage only their own goals.
 
-- Session-based login
+---
 
-- Logout option
+## 🎯 Goal Management
 
-- Each user must only see their own goals
+Users can:
 
-- Store user data and goals in SQLite database
+* Create new goals
+* Add a goal title
+* Add an optional description
+* Set a deadline
+* View active goals
+* Mark goals as completed
+* Delete goals
 
-- When a user logs out and logs back in, their previous goals must reappear (persistent storage)
+Completed goals are visually distinguished from active goals to make progress easy to understand.
 
-----------------------------------------
+---
 
-2. ANIMATED BACKGROUND (CALM WATER FLOW THEME)
+## 🌱 Nature-Based Progress System
 
-----------------------------------------
+Instead of using a traditional progress bar, GuidedGoals represents progress through the growth of a tree.
 
-- Constant slow-moving water flow animation
+| Progress | Stage           |
+| -------- | --------------- |
+| 0–25%    | 🌱 Seed         |
+| 25–50%   | 🌿 Small Plant  |
+| 50–75%   | 🌲 Growing Tree |
+| 100%     | 🌳 Full Tree    |
 
-- Soft blue + teal gradient overlay
+The tree stage automatically changes according to the percentage of completed goals.
 
-- Subtle wave motion (very slow and smooth)
+This creates a more visual and motivating way to track consistency.
 
-- Optional ripple effect when user clicks
+---
 
-- Background must not distract from content
+## 📊 Progress Statistics
 
-- Add slight blur layer behind content for readability
+The dashboard provides important progress information such as:
 
-- Use smooth transitions only (no fast animation)
+* **Total Goals**
+* **Completed Goals**
+* **Completion Percentage**
 
-----------------------------------------
+These statistics update automatically as users manage their goals.
 
-3. DASHBOARD (AFTER LOGIN)
+---
 
-----------------------------------------
+## 💬 Motivational Feedback
 
-At the top display:
+When a goal is completed, GuidedGoals provides a short motivational message.
 
-"Welcome, [Username] 🌿"
+Examples:
 
-Below that, add a small informational glass-style box:
+* 🌿 Growth happens daily
+* 🌲 Consistency builds forests
+* 🌱 Small steps matter
 
-Title: "How It Works"
+Completion interactions use subtle animations and visual feedback to make progress feel rewarding.
 
-Content:
+---
 
-- Add your goals
+## 🌊 Calm Water Theme
 
-- Mark them complete
+GuidedGoals uses a peaceful nature-inspired interface.
 
-- Watch your tree grow 🌳
+### Visual elements include:
 
-- Stay consistent daily
+* Slow-moving water animation
+* Soft blue and teal gradients
+* Subtle wave motion
+* Glassmorphism cards
+* Soft shadows
+* Rounded UI elements
+* Smooth transitions
+* Minimal visual clutter
 
-The box must:
+The animations are intentionally slow and subtle so they do not distract from productivity.
 
-- Have rounded corners
+---
 
-- Frosted glass effect (glassmorphism)
+## ☀️ Day & 🌙 Night Mode
 
-- Soft shadow
+GuidedGoals supports two visual modes.
 
-- Minimal clean layout
+### Day Mode
 
-----------------------------------------
+* Bright water tones
+* Light interface
+* Soft aqua and teal colors
 
-4. GOAL MANAGEMENT SYSTEM
+### Night Mode
 
-----------------------------------------
+* Darker blue tones
+* Subtle glow effects
+* Floating particles
+* Darker background
 
-User should be able to:
+The interface transitions smoothly between modes.
 
-- Add new goal
+---
 
-  - Title (required)
+## 🎨 Design Philosophy
 
-  - Description (optional)
+GuidedGoals follows a:
 
-  - Deadline
+> **Calm Productivity Aesthetic**
 
-- View goals in clean card format
+The design focuses on making productivity feel peaceful rather than stressful.
 
-- Mark goals complete with checkbox
+### Design principles
 
-- Delete goals
+* Minimal
+* Clean
+* Peaceful
+* Premium
+* Responsive
+* Nature-inspired
+* Easy to use
 
-When a goal is marked complete:
+---
 
-- Show green tick
+## 🛠️ Tech Stack
 
-- Apply strike-through to text
+### Frontend
 
-- Smooth animation
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
 
-- Subtle ripple or glow effect
+### Backend & Database
 
-- Show small motivational popup message for 3 seconds
+* Supabase
+* Authentication
+* Persistent data storage
+* Database
 
-Example messages:
+### Development
 
-- "Growth happens daily 🌿"
+* Lovable
+* GitHub
+* npm
 
-- "Consistency builds forests 🌲"
+---
 
-- "Small steps matter 🌱"
+## 📂 Project Structure
 
-----------------------------------------
+```text
+guidedgoals/
+│
+├── public/
+│   └── Static assets
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   └── ...
+│
+├── supabase/
+│   └── Database and backend configuration
+│
+├── package.json
+├── package-lock.json
+├── vite.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── components.json
+└── README.md
+```
 
-5. NATURE-THEMED PROGRESS SYSTEM (TREE GROWTH)
+---
 
-----------------------------------------
+## 🚀 Getting Started
 
-Replace normal progress bar with visual tree growth stages:
+### Prerequisites
 
-0–25% → 🌱 Seed
+Make sure you have:
 
-25–50% → 🌿 Small plant
+* Node.js
+* npm
 
-50–75% → 🌲 Growing tree
+installed on your system.
 
-100% → 🌳 Full tree
+### Clone the repository
 
-Progress must automatically calculate based on completed goals.
+```bash
+git clone https://github.com/charitha1702/guidedgoals.git
+```
 
-Smooth transition animation between stages.
+### Navigate into the project
 
-----------------------------------------
+```bash
+cd guidedgoals
+```
 
-6. STATS SECTION
+### Install dependencies
 
-----------------------------------------
+```bash
+npm install
+```
 
-Display:
+### Start the development server
 
-- Total Goals
-
-- Completed Goals
-
-- Completion Percentage
-
-Clean minimal cards layout.
-
-----------------------------------------
-
-7. UI & DESIGN REQUIREMENTS
-
-----------------------------------------
-
-Theme: Calm Productive Aesthetic
-
-Colors:
-
-- Deep teal
-
-- Aqua blue
-
-- Soft white
-
-- Light transparency effects
-
-Use:
-
-- Rounded corners
-
-- Soft shadows
-
-- Smooth animations
-
-- Glassmorphism cards
-
-- Responsive layout (mobile + desktop friendly)
-
-----------------------------------------
-
-8. DAY / NIGHT MODE TOGGLE
-
-----------------------------------------
-
-Add toggle switch:
-
-Day Mode:
-
-- Brighter water tones
-
-- Lighter overlay
-
-Night Mode:
-
-- Darker blue tones
-
-- Slight glow effect
-
-- Subtle floating particles
-
-Smooth transition between modes.
-
-----------------------------------------
-
-9. TECH STACK REQUIREMENTS
-
-----------------------------------------
-
-Frontend:
-
-- HTML
-
-- CSS (with animation)
-
-- JavaScript
-
-Backend:
-
-- Python Flask
-
-Database:
-
-- SQLite
-
-Code Requirements:
-
-- Clean and modular structure
-
-- Proper database schema
-
-- Secure session handling
-
-- Commented code
-
-- Organized folder structure
-
-----------------------------------------
-
-FINAL FEEL
-
-----------------------------------------
-
-The app should feel:
-
-- Calm
-
-- Premium
-
-- Peaceful
-
-- Motivating
-
-- Clean
-
-- Minimal but alive
-
-No clutter.
-
-No harsh colors.
-
-No fast animations.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://guidedgoals.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/83fc31ae-cce3-4d20-a920-4dd937d24b94).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+The application will be available through the local development URL provided by Vite.
+
+---
+
+## 🔑 Environment Variables
+
+If your local setup requires environment variables, create a `.env` file in the project root.
+
+Example:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+**Never commit private API keys, service-role keys, passwords, or other secrets to GitHub.**
+
+---
+
+## 🔄 Development Workflow
+
+GuidedGoals was developed using **Lovable** and is connected to GitHub.
+
+The development workflow can be:
+
+```text
+Lovable
+   ↓
+Code changes
+   ↓
+GitHub
+   ↓
+Local development
+   ↓
+Testing
+   ↓
+Commit changes
+```
+Changes made through Lovable can be synchronized with the connected GitHub repository.
+
+---
+## 📱 Responsive Design
+
+GuidedGoals is designed to work across:
+
+* 💻 Desktop
+* 📱 Mobile
+* 📟 Tablet
+
+The interface adapts its layout while maintaining the same calm visual experience.
+
+---
+## 🌳 User Experience
+
+The main experience follows a simple loop:
+
+```text
+Create a Goal
+      ↓
+Work Towards It
+      ↓
+Complete the Goal
+      ↓
+Watch Your Progress Grow
+      ↓
+🌳 Grow Your Forest
+      ↓
+Create the Next Goal
+```
+The goal is to make consistency feel visible and rewarding.
+
+---
+##  Future Improvements
+
+Potential future features include:
+* Daily goal reminders
+* Push notifications
+* Goal categories
+* Habit tracking
+* Streak tracking
+* Weekly progress reports
+* Monthly analytics
+* Achievement badges
+* Multiple trees / personal forest
+* Goal priority levels
+* Calendar integration
+* AI-powered goal suggestions
+* AI productivity assistant
+
+---
+##  Vision
+
+GuidedGoals is built around a simple idea:
+> **Small consistent actions grow into something bigger.**
+Instead of treating productivity as a race, GuidedGoals turns progress into a visual journey — one goal, one step, and one tree at a time.
+
+---
+##  Project
+
+**GuidedGoals — Forest Flow Goals**
+
+Built with using React, TypeScript, Tailwind CSS, Supabase, Lovable, and GitHub.
